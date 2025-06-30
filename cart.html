@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TechShop - Premium Electronics</title>
+    <title>Shopping Cart - TechShop</title>
     <link rel="stylesheet" href="css/styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
@@ -23,38 +23,36 @@
     </header>
 
     <main>
-        <section class="hero">
-            <div class="hero-content">
-                <h2>Welcome to TechShop</h2>
-                <p>Discover the latest in premium electronics and technology</p>
-                <a href="products.html" class="cta-button">Shop Now</a>
+        <section class="cart-page">
+            <h2>Shopping Cart</h2>
+            
+            <div id="cart-content">
+                <!-- Cart items will be loaded here -->
             </div>
-        </section>
-
-        <section class="featured-products">
-            <h2>Featured Products</h2>
-            <div class="products-grid" id="featured-products">
-                <!-- Featured products will be loaded here by JavaScript -->
+            
+            <div id="cart-empty" class="empty-cart" style="display: none;">
+                <i class="fas fa-shopping-cart"></i>
+                <h3>Your cart is empty</h3>
+                <p>Add some products to get started!</p>
+                <a href="products.html" class="cta-button">Browse Products</a>
             </div>
-        </section>
-
-        <section class="features">
-            <div class="features-grid">
-                <div class="feature">
-                    <i class="fas fa-shipping-fast"></i>
-                    <h3>Fast Shipping</h3>
-                    <p>Free shipping on orders over $100</p>
+            
+            <div id="cart-summary" class="cart-summary" style="display: none;">
+                <div class="summary-row">
+                    <span>Subtotal:</span>
+                    <span id="cart-subtotal">$0.00</span>
                 </div>
-                <div class="feature">
-                    <i class="fas fa-shield-alt"></i>
-                    <h3>Secure Payment</h3>
-                    <p>Your payment information is safe with us</p>
+                <div class="summary-row">
+                    <span>Shipping:</span>
+                    <span id="cart-shipping">Free</span>
                 </div>
-                <div class="feature">
-                    <i class="fas fa-headset"></i>
-                    <h3>24/7 Support</h3>
-                    <p>Get help whenever you need it</p>
+                <div class="summary-row total">
+                    <span>Total:</span>
+                    <span id="cart-total">$0.00</span>
                 </div>
+                <button class="checkout-btn">
+                    <i class="fas fa-credit-card"></i> Proceed to Checkout
+                </button>
             </div>
         </section>
     </main>
@@ -87,17 +85,16 @@
     <script src="js/products.js"></script>
     <script src="js/cart.js"></script>
     <script>
-        // Load featured products on homepage
         document.addEventListener('DOMContentLoaded', function() {
-            const featuredContainer = document.getElementById('featured-products');
-            const featuredProducts = products.slice(0, 3); // Show first 3 products as featured
-            
-            featuredProducts.forEach(product => {
-                featuredContainer.appendChild(createProductCard(product));
-            });
-            
+            displayCart();
             updateCartCount();
+            
+            // Setup checkout button
+            document.querySelector('.checkout-btn').addEventListener('click', function() {
+                alert('Checkout functionality would be implemented here in a real application!');
+            });
         });
     </script>
 </body>
 </html>
+

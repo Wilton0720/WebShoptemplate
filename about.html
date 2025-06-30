@@ -1,0 +1,121 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - TechShop</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1><i class="fas fa-laptop"></i> TechShop</h1>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="about.html">About</a>
+            <a href="cart.html" class="cart-link">
+                <i class="fas fa-shopping-cart"></i> Cart (<span id="cart-count">0</span>)
+            </a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="about-page">
+            <h2>About TechShop</h2>
+            
+            <div class="about-content">
+                <div class="about-section">
+                    <h3>Our Story</h3>
+                    <p>Founded in 2020, TechShop has been at the forefront of bringing the latest technology to consumers worldwide. We believe that everyone deserves access to high-quality electronics that enhance their daily lives.</p>
+                </div>
+                
+                <div class="about-section">
+                    <h3>Our Mission</h3>
+                    <p>To provide our customers with premium electronics, exceptional service, and competitive prices. We carefully curate our product selection to ensure you get the best value for your investment.</p>
+                </div>
+                
+                <div class="about-section">
+                    <h3>Why Choose Us?</h3>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Carefully selected premium products</li>
+                        <li><i class="fas fa-check"></i> Competitive pricing and regular deals</li>
+                        <li><i class="fas fa-check"></i> Fast and reliable shipping</li>
+                        <li><i class="fas fa-check"></i> Excellent customer support</li>
+                        <li><i class="fas fa-check"></i> Hassle-free returns and warranty</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="contact-info">
+                <h3>Get in Touch</h3>
+                <div class="contact-grid">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>info@techshop.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>(555) 123-4567</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Address</h4>
+                            <p>123 Tech Street<br>Digital City, DC 12345</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Hours</h4>
+                            <p>Mon-Fri: 9AM-6PM<br>Sat-Sun: 10AM-4PM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>TechShop</h3>
+                <p>Your trusted source for premium electronics</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="cart.html">Shopping Cart</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Email: info@techshop.com</p>
+                <p>Phone: (555) 123-4567</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 TechShop. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/cart.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            updateCartCount();
+        });
+    </script>
+</body>
+</html>
+
