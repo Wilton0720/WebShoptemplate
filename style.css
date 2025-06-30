@@ -13,12 +13,18 @@ header {
     background-color: #D9D9D9;
     color: #0D0D0D;
     text-align: center;
-    padding: 1rem;
+    padding: 1rem 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     border: solid #33ccffee 2px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+
+    position: sticky;
+    top: 0;
+    width: 100%;    
+    z-index: 1000;
+
 }
 
 .logo h1 {
@@ -30,7 +36,7 @@ header {
 
 .logo i {
     color: #33ccffee;
-    margin-right: 0.5rem;
+    margin-right: 0.5rem;/
 }
 
 nav {
@@ -112,6 +118,37 @@ main {
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
+}
+.featured-products h2 {
+    position: relative;
+    display: block;
+    margin: 0 auto 2rem auto;
+    padding: 0 0 0.5rem 0;
+    background: none;
+    color: #222;
+    font-size: 2rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    letter-spacing: 0.5px;
+    text-align: center;
+    overflow: visible;
+}
+
+.featured-products h2::before {
+    content: none;
+}
+
+.featured-products h2::after {
+    content: "";
+    display: block;
+    margin: 0.5rem auto 0 auto;
+    width: 48px;
+    height: 3px;
+    background: #33ccff;
+    border-radius: 2px;
+    opacity: 0.7;
 }
 
 .product-card {
@@ -538,6 +575,16 @@ footer {
     
     .contact-grid {
         grid-template-columns: 1fr;
+    }
+    
+    .featured-products h2 {
+        font-size: 1.2rem;
+        padding-bottom: 0.4rem;
+    }
+    
+    .featured-products h2::after {
+        width: 32px;
+        height: 2px;
     }
 }
 
